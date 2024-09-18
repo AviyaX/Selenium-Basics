@@ -8,9 +8,25 @@ public class Locators {
 		WebDriver driver = new ChromeDriver ();
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 		System.out.println(driver.getCurrentUrl());
+		
+		//ID - Locator 
 		driver.findElement(By.id("inputUsername")).sendKeys("rahul");
+		//name Locator 
 		driver.findElement(By.name("inputPassword")).sendKeys("hello123");
-		driver.findElement(By.className("signInBtn")).click();
+		//ClassName Locator
+		//driver.findElement(By.className("signInBtn")).click();
+		/* 
+		 * CSS Selectors 
+		 * 		CalssName --> tagName.classname
+		 * 			driver.findElement(By.className("signInBtn")).click();
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		
+		driver.findElement(By.cssSelector("Button.signInBtn")).click();
 
 	}
 
